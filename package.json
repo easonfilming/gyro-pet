@@ -1,0 +1,30 @@
+{
+  "name": "gyro-pet",
+  "productName": "陀螺桌宠",
+  "version": "1.0.0",
+  "description": "3D 陀螺桌宠 —— 用鞭子抽它，狂转 5 秒",
+  "main": "main.js",
+  "author": "you",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable"
+  },
+  "build": {
+    "appId": "com.gyropet.desktop",
+    "productName": "陀螺桌宠",
+    "files": ["main.js", "preload.js", "pet.html", "vendor/**", "build/icon.png"],
+    "win": {
+      "target": ["portable"],
+      "icon": "build/icon.png",
+      "artifactName": "陀螺桌宠.exe"
+    },
+    "portable": {
+      "artifactName": "陀螺桌宠.exe"
+    }
+  },
+  "devDependencies": {
+    "electron": "31.7.7",
+    "electron-builder": "24.13.3"
+  }
+}

@@ -1,0 +1,9 @@
+# 构建产物
+node_modules/
+dist/
+
+# 便携工具链（Node 便携版 / 本地构建镜像）
+.tools/
+
+# 运行时杂项
+*.log
